@@ -1,13 +1,13 @@
 {% set name = "slimit" %}
 {% set version = "0.8.1" %}
-
+{% set revision = "3533eba9ad5b39f3a015ae6269670022ab310847" %}
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
-
+# update source to git archive as no release available for Python 3 updated version
 source:
-  url: "https://github.com/rspivak/{{ name }}/archive/{{ version }}.tar.gz"
-  sha256: "015fc1917c0eff834514fcedd4251275a3dacb10df1b49549277fe5e19de1ddf"
+  url: "https://github.com/rspivak/{{ name }}/archive/{{ revision }}.tar.gz" # https://github.com/rspivak/slimit/archive/{{ revision }}.tar.gz
+  sha256: "af3d208099218a4d5265e1ed06960b0260b39bf6849bfb80bac2c274758700ad"
 
 build:
   number: 5
